@@ -24,6 +24,9 @@ RUN chown -R www-data:www-data /var/www/html
 # Enable mod_rewrite
 RUN a2enmod rewrite
 
+# Install PHP dependencies
+RUN composer install
+
 # Expose port 80
 EXPOSE 80
 
